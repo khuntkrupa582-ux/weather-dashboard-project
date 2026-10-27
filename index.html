@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Live Weather Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <main class="dashboard">
+    <header class="header">
+      <p class="eyebrow">LIVE WEATHER</p>
+      <h1>Weather Dashboard</h1>
+      <p class="subtitle">Discover the weather in your city.</p>
+    </header>
+
+    <form id="form" class="search-form">
+      <label for="city">Search city</label>
+      <div class="search-row">
+        <input
+          type="text"
+          id="city"
+          placeholder="Enter city, e.g. Surat"
+          autocomplete="off"
+        >
+        <button type="submit" id="searchBtn">Search</button>
+      </div>
+    </form>
+
+    <p id="status" class="status" role="status" aria-live="polite">
+      Enter a city to check the weather.
+    </p>
+
+    <section id="currentWeather" aria-label="Current weather"></section>
+
+    <section class="forecast-section">
+      <h2>5-Day Forecast</h2>
+      <div id="forecast" class="forecast-grid"></div>
+    </section>
+
+    <footer>Weather data provided by Open-Meteo</footer>
+  </main>
+</body>
+</html>
